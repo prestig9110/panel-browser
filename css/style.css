@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.main .block {
+  height: 100vh;
+  width: 100%;
+  -webkit-transition: all 0.35 ease !important;
+  transition: all 0.35 ease !important;
+}
+
+.main .block .block-tabs {
+  margin: 20px;
+  height: auto;
+}
+
+.main .block .block-tabs .state {
+  position: absolute;
+  left: -10000px;
+}
+
+.main .block .block-tabs .flex-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .block .block-tabs .flex-tabs .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 15%;
+  height: auto;
+}
+
+.main .block .block-tabs .flex-tabs .link .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  height: auto;
+  max-height: 70px;
+  color: #f4f4f4;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+  border-left: 10px solid transparent;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.main .block .block-tabs .flex-tabs .link .tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main .block .block-tabs .flex-tabs .panel {
+  padding: 20px;
+  min-height: 300px;
+  display: none;
+  width: 100%;
+  height: 96vh;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  height: 175px;
+  width: 175px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  color: #f4f4f4;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content img {
+  width: auto;
+  height: 100%;
+  padding-top: 20%;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  z-index: 100;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content img:hover {
+  padding-top: 0;
+  padding-bottom: 20%;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content img:hover ~ label {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content img:hover ~ span {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+  opacity: 0;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content span {
+  width: 175px;
+  height: auto;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  z-index: 50;
+}
+
+.main .block .block-tabs .flex-tabs .panel .flex-block .content label {
+  width: 175px;
+  height: auto;
+  padding: 5px;
+  font-size: 14px;
+  position: absolute;
+  font-weight: 600;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  bottom: 0;
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px);
+  opacity: 0;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  z-index: 50;
+}
+
+#tab-one:checked ~ .tabs #tab-one-label,
+#tab-two:checked ~ .tabs #tab-two-label,
+#tab-three:checked ~ .tabs #tab-three-label,
+#tab-four:checked ~ .tabs #tab-four-label,
+#tab-five:checked ~ .tabs #tab-five-label,
+#tab-six:checked ~ .tabs #tab-six-label,
+#tab-seven:checked ~ .tabs #tab-seven-label,
+#tab-eight:checked ~ .tabs #tab-eight-label,
+#tab-nine:checked ~ .tabs #tab-nine-label,
+#tab-ten:checked ~ .tabs #tab-ten-label,
+#tab-eleven:checked ~ .tabs #tab-eleven-label,
+#tab-twelve:checked ~ .tabs #tab-twelve-label {
+  cursor: default;
+  border-left-color: #69be28;
+}
+
+#tab-one:checked ~ .tabs #tab-one-panel,
+#tab-two:checked ~ .tabs #tab-two-panel,
+#tab-three:checked ~ .tabs #tab-three-panel,
+#tab-four:checked ~ .tabs #tab-four-panel,
+#tab-five:checked ~ .tabs #tab-five-panel,
+#tab-six:checked ~ .tabs #tab-six-panel,
+#tab-seven:checked ~ .tabs #tab-seven-panel,
+#tab-eight:checked ~ .tabs #tab-eight-panel,
+#tab-nine:checked ~ .tabs #tab-nine-panel,
+#tab-ten:checked ~ .tabs #tab-ten-panel,
+#tab-eleven:checked ~ .tabs #tab-eleven-panel,
+#tab-twelve:checked ~ .tabs #tab-twelve-panel {
+  display: block;
+}
